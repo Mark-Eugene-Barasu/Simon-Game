@@ -56,3 +56,12 @@ a{
   box-shadow: 0 0 20px white;
   background-color: grey;
 }
+
+/* this is to aid mobile or smaller devices to allow to press any key */
+input[type="text"] {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  height: 30px;
+  width: 30px;
+}
