@@ -68,3 +68,39 @@ input[type="text"] {
   background-color: chartreuse;
   border: 4px solid cyan;
 }
+
+@media only screen and (max-width: 1200px) {
+
+  body {
+    background-color: lightblue;
+  }
+
+  a {
+    color: black;
+  }
+
+  #level-title {
+    color:#011F3F;
+  }
+
+  .btn {
+    margin: 10px;
+    /* display: inline-block; */
+    height: 20vw; /* so that it will still be a square*/
+    width: 20vw;
+    border: 10px solid black;
+    border-radius: 20%;
+  }
+ 
+  input[type="text"] {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: blue;
+    border: 4px solid cyan;
+    color: white;
+  }
+}
