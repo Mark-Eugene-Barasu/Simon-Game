@@ -4,11 +4,19 @@ let userClickedPattern = [];
 let started = false;
 let level = 0;
 
-$(document).keypress(() => {
+// $(document).keypress(() => {
+//   if (!started) {
+//     startGame();
+//   }
+// });
+
+$(`.start_button`).on(`click`,  () => {
   if (!started) {
+    $(`.start_button`).hide();
     startGame();
-  }
+  }  
 });
+
 
 $(".btn").click(function() {
   const userChosenColor = $(this).attr("id");
@@ -43,7 +51,8 @@ function checkAnswer(currentLevel) {
   } else {
     playSound("wrong");
     $("body").addClass("game-over");
-    $("#level-title").text("Game Over, Press Any Key to Restart");
+    $("#level-title").text("Game Over, Press START to Restart");
+    $(`.start_button`).show();
     setTimeout(() => {
       $("body").removeClass("game-over");
       startOver();
